@@ -1,0 +1,20 @@
+plugins {
+    id 'application'
+}
+
+group 'com.epam.esm'
+version '1.0'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+
+    compile project(':api')
+}
+
+mainClassName = 'com.epam.esm.App'
+
+jar {
+    manifest.attributes('Main-Class': mainClassName);
+}
